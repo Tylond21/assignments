@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- vue resources -->
+    <script src="/static/vue.js"></script>
+    <script src="/static/vue-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <!-- A separate vue instance as global store -->
+    <script src="/static/store.js"></script>
+
+    <!-- components -->
+    <script src="/static/components/aside-cart.js"></script>
+    <script src="/static/components/main.js"></script>
+    <script src="/static/components/product.js"></script>
+    <script src="/static/components/cart.js"></script>
+    <!-- <script src="/static/components/checkout.js"></script>
+    <script src="/static/components/checkout2.js"></script> -->
+
+    <!-- main vue instance -->
+    <script src="/static/app.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="content">
+                <div id="logo">
+                    <h1>MySocks</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <router-link to="/"><i class="fa fa-home"></i></router-link>
+                        </li>
+                        <li>
+                            <router-link to="/product/1"><i class="fa fa-percent"></i></router-link>
+                        </li>
+                        <li>
+                            <router-link to="/cart"><i class="fa fa-shopping-cart"></i></router-link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <router-view></router-view>
+
+        <footer class="flexbox">
+            <div class="contact">
+                <span class="strong">Customer service:</span> |
+                +47 321 09 87654 |
+                <a href="#">contact@noreply.com</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
